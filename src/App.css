@@ -1,0 +1,115 @@
+/* Core Layout Container */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #2c3e50;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Header Styling */
+.header {
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 16px;
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #1e293b;
+}
+
+/* RESPONSIVE LAYOUT ENGINE: 1 column on mobile, 4 columns on desktop screens */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Individual Movie Card Design */
+.movie-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.movie-title {
+  font-size: 1.2rem;
+  margin: 0 0 8px 0;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.movie-tagline {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.movie-rating {
+  font-weight: 600;
+  color: #ea580c;
+  font-size: 0.95rem;
+}
+
+/* Detailed Single Movie View Styling */
+.details-view {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.back-btn {
+  background-color: #475569;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 24px;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background-color: #334155;
+}
+
+.detail-item {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #475569;
+  display: inline-block;
+  width: 200px;
+}
