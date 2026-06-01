@@ -1,63 +1,79 @@
-***Important note***:
+# CineView Hub 🎬
 
-This assignment is meant to be completed within **a maximum of 2 hours**.
+A full-stack movie browsing web application built as part of the Pi-xcels Take Home Assignment.
 
-Just attempt this assignment, and submit your code before **2 hours** is up, regardless of whether it is fully completed.
+## About the Project
 
-You may provide **additional documentation** on how you would continue with this assignment if you were given more time.
+CineView Hub allows users to browse a collection of movies, search by title, view key details at a glance, and explore individual movie profiles. Built with a Node.js/Express backend and a React frontend.
 
-# Overview
+## Features
 
-You are required to build a simple fullstack web application that displays a list of movies and movie details.
+- Movie Listing Page - Displays all movies in a responsive 4-column grid (1 column on mobile)
+- Search Functionality - Filter movies by title in real time
+- Movie Detail Page - Shows full movie information including runtime, localized release date, overview and status
+- Responsive Design - Works on both desktop and mobile devices
+- REST API - Clean backend API built from scratch using Express.js
 
-Within this project is an existing application boilerplate (React + Node), but you are free to modify it as you want to.
+## Tech Stack
 
-# Steps
+Frontend: React.js, CSS3  
+Backend: Node.js, Express.js  
+Data Source: movies_metadata.json (provided dataset)
 
-1. Start editing code to complete this assignment
+## API Endpoints
 
-# Details
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| /api/movies | GET | Returns all movies with title, tagline and rating |
+| /api/movies/:id | GET | Returns full details of a specific movie by ID |
 
-* The backend server should load data from the movies data file found in `server/movies_metadata.json`.
-* The backend server should expose APIs to the frontend to achieve the following:
-  * List movies
-  * Get single movie by ID
-* The frontend web application should display 2 different screens:
-  * List movies page (shown initially)
-    * Display the following fields (`title`, `tagline` and `vote_average` [calculated out of 10]) with **responsive web design** (e.g. show 4 columns on a desktop but show only 1 column on a mobile device)
-  * Display single movie page upon clicking movie in list page
-    * Display every field (`release_date` should be localized based on browser settings. `runtime` is calculated in minutes)
-    * Display a button/link to return to list movies page
+## How to Run Locally
 
-**Additional**
+1. Clone the repository
+2. Run npm install
+3. Run npm start
+4. Open http://localhost:3000 in your browser
 
-* Any criteria not stated above may not result in bonus points
-* **Responsive web design** is explained here: [https://www.w3schools.com/html/html_responsive.asp](https://www.w3schools.com/html/html_responsive.asp)
+## Requirements Fulfillment Checklist
 
-# Code Submission
+- [x] Backend loads data from server/movies_metadata.json
+- [x] API endpoint to list all movies
+- [x] API endpoint to get single movie by ID
+- [x] Movie listing page with title, tagline and vote_average
+- [x] Responsive design - 4 columns on desktop, 1 column on mobile
+- [x] Single movie detail page with all fields displayed
+- [x] Localized release date based on browser settings
+- [x] Runtime displayed in minutes
+- [x] Back button to return to movie listing page
+- [x] Search functionality added as additional enhancement
 
-1. Upload to a public Github repository or a cloud drive (e.g. Google Drive, OneDrive) your code, and email the shared link
+## Future Features
 
-*Don't bother trying to email the code directly, because the email attachment will be blocked.*
+### 1. User Authentication
+Allow users to create accounts and log in to personalize their experience.
 
-# Further Project Details (Optional)
+### 2. User Movie Ratings and Reviews
+Let users rate movies and submit their own written reviews.
 
-## Starter Project - create-react-app and Express
+### 3. Advanced Filtering
+Filter movies by genre, release year, language and rating range.
 
-This starter project runs both a webpack development server for front-end work and a back-end server in the same project, at the same time. This is a common scenario when you're building your front end with [create-react-app], and your back end with [Express].
+### 4. Watchlist Feature
+Users can save movies to a personal watchlist for later viewing.
 
-This starter app will get you on your way with this scenario!
+### 5. Live Search Suggestions
+Show autocomplete suggestions while typing in the search bar.
 
-## Forwarding requests via a proxy
+### 6. Pagination
+Load movies in pages instead of all at once for better performance.
 
-In **package.json**...
+### 7. Dark Mode
+Toggle between light and dark themes for better user experience.
 
-1. if you set your `start` script to `"npm run production"`, it will build the React app and Express will serve the static bundle over port 3000.
+### 8. Movie Poster Images
+Display movie poster images fetched from an external movie API.
 
-2. if you set your `start` script to `"npm run development"`, it will concurrently start the webpack dev server/watcher and the Express server. The latter will be listening on port 3001, but you don't need to change anything in your code because: proxies!
+## Developer
 
-As it stands, the server listens for requests to `/api`; to get this working in `development` mode, we're using [`http-proxy-middleware`] in **src/setupProxy.js** to forward any incoming request to `/api/whatever/endpoint/you/have` over to the `target`, i.e., the Express server.
-
-[create-react-app]: https://create-react-app.dev
-[Express]: https://expressjs.com/
-[`http-proxy-middleware`]: https://github.com/chimurai/http-proxy-middleware
+Rakshita A V  
+24BCM542
