@@ -1,6 +1,6 @@
 # CineView Hub 🎬
 
-A full-stack movie browsing web application built as part of the Pi-xcels Take Home Assignment.
+A full-stack movie browsing web application
 
 ## About the Project
 
